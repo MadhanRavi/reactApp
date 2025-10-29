@@ -1,0 +1,28 @@
+{
+  "name": "reactapp",
+  "version": "1.0.0",
+  "description": "React App by Madhan",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadhanRavi/reactApp.git"
+  },
+  "author": "Madhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MadhanRavi/reactApp/issues"
+  },
+  "homepage": "https://github.com/MadhanRavi/reactApp#readme",
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
+}
