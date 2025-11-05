@@ -26,7 +26,7 @@ body {
     flex-wrap: wrap;
     justify-content: start;
 }
-.search {
+.search, .filter {
     margin: 10px;
 }
 .res-card {
