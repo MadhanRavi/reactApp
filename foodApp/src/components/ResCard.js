@@ -1,14 +1,15 @@
 import { CDN_IMG_URL } from "../utils/consts";
 
 const ResCard = ({ resData }) => {
+  console.log(resData.info);
   const { name, cuisines, costForTwo, avgRating, sla, cloudinaryImageId } =
-    resData;
+    resData?.info;
   return (
     <div className="res-card">
       <img src={CDN_IMG_URL + cloudinaryImageId} alt="biriyani" />
       <h2>{name}</h2>
       <h3>{cuisines.join(", ")}</h3>
-      <h4>₹{costForTwo / 100} for Two</h4>
+      <h4>{costForTwo} </h4>
       <h4>{avgRating} Stars</h4>
       <h4>{sla.deliveryTime} Mins</h4>
     </div>

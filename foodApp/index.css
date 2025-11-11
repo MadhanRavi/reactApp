@@ -10,8 +10,9 @@ body {
 .logo {
     width: 100px;
 }
-.nav-items {
-    
+.logBtn {
+    margin: 10px;
+    cursor: pointer;
 }
 .nav-items ul {
     display: flex;
@@ -21,12 +22,12 @@ body {
     padding: 10px;
     margin: 10px;
 }
-.res-container {
+.res-container, .shimmer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
 }
-.search, .filter {
+.search, .filter-btn {
     margin: 10px;
 }
 .res-card {
@@ -44,4 +45,30 @@ body {
 .res-card:hover {
     transition: 0.4s;
     box-shadow: 0px 0px 8px #575757;
+}
+.shimmer-card {
+    width: 250px;
+    height: 300px; 
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #d5e4ec3b 15%, #eaeff2c4 20%, #f6f7f8 40%, #d1e0ef40 100%);
+    background-size: 200% 100%;
+    animation: shimmer-card 4.2s infinite linear;
+    margin: 8px;
+    transition: 0.4s;
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    } 
+}
+
+@keyframes shimmer-card {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.filter {
+    display: flex;
 }
