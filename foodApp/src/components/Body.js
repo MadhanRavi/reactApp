@@ -2,6 +2,8 @@ import ResCard from "./ResCard";
 import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [restList, setResList] = useState([]);
@@ -27,10 +29,15 @@ const Body = () => {
     );
   };
 
+  const onlineStatus = useOnlineStatus();
+
+  if (!onlineStatus)
+    return <h1>You are Offline, Check the internet connection!!!</h1>;
+
+  if (restList.length === 0) return <Shimmer />;
+
   // Conditional Rendering
-  return restList.length === 0 ? (
-    <Shimmer />
-  ) : (
+  return (
     <div className="body">
       <div className="filter">
         <div className="search">
@@ -70,7 +77,9 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filterRestList.map((res) => (
-          <ResCard key={res.info.id} resData={res} />
+          <Link key={res.info.id} to={"/restaurant/" + res.info.id}>
+            <ResCard resData={res} />
+          </Link>
         ))}
       </div>
     </div>
