@@ -39,18 +39,19 @@ const Body = () => {
   // Conditional Rendering
   return (
     <div className="body">
-      <div className="filter">
+      <div className="flex items-center m-4">
         <div className="search">
           <input
             type="text"
             name="search"
-            className="search-box"
+            className="border border-solid"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
+            className="bg-gray-300 rounded-lg py-2 px-4 m-2 hover:bg-gray-400 cursor-pointer"
             onClick={() => {
               const filterList = restList.filter((res) =>
                 searchText.length > 0
@@ -64,18 +65,20 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filterList = restList.filter(
-              (res) => res?.info?.avgRating > 4.5
-            );
-            setResList(filterList);
-          }}>
-          Filter Top Rated
-        </button>
+        <div className="search">
+          <button
+            className="bg-gray-300 rounded-lg py-2 px-4 m-2 hover:bg-gray-400 cursor-pointer"
+            onClick={() => {
+              const filterList = restList.filter(
+                (res) => res?.info?.avgRating > 4.5
+              );
+              setResList(filterList);
+            }}>
+            Filter Top Rated
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filterRestList.map((res) => (
           <Link key={res.info.id} to={"/restaurant/" + res.info.id}>
             <ResCard resData={res} />
