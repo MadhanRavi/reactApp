@@ -20,4 +20,17 @@ const ResCard = ({ resData }) => {
   );
 };
 
+export const withPromotedLabel = (ResCard) => {
+  return (props) => {
+    return (
+      <div className="relative">
+        <label className="absolute bg-black text-white mx-4 p-2 rounded top-0 left-0">
+          Promoted
+        </label>
+        <ResCard {...props} />
+      </div>
+    );
+  };
+};
+
 export default ResCard;

@@ -28,6 +28,7 @@
     "react-router-dom": "^6.30.1",
     "tailwindcss": "^4.1.17"
   },
+  "extends": "@parcel/config-default",
   "browsersList": [
     "last 2 versions"
   ]

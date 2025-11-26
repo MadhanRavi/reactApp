@@ -1,14 +1,17 @@
-import ResCard from "./ResCard";
-import resList from "../utils/mockData";
-import { useEffect, useState } from "react";
+import ResCard, { withPromotedLabel } from "./ResCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useEffect, useState, useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [restList, setResList] = useState([]);
   const [filterRestList, setFilterRestList] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const { loggedUser, setUserName } = useContext(UserContext);
+
+  const ResCardPromoted = withPromotedLabel(ResCard);
 
   useEffect(() => {
     fetchData();
@@ -77,11 +80,24 @@ const Body = () => {
             Filter Top Rated
           </button>
         </div>
+        <div className="search">
+          <label>Username: </label>
+          <input
+            type="text"
+            className="border border-black p-2"
+            value={loggedUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </div>
       </div>
       <div className="flex flex-wrap">
         {filterRestList.map((res) => (
           <Link key={res.info.id} to={"/restaurant/" + res.info.id}>
-            <ResCard resData={res} />
+            {res.info.isOpen ? (
+              <ResCardPromoted resData={res} />
+            ) : (
+              <ResCard resData={res} />
+            )}
           </Link>
         ))}
       </div>
