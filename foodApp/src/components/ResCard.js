@@ -1,7 +1,6 @@
 import { CDN_IMG_URL } from "../utils/consts";
 
 const ResCard = ({ resData }) => {
-  console.log(resData.info);
   const { name, cuisines, costForTwo, avgRating, sla, cloudinaryImageId } =
     resData?.info;
   return (
