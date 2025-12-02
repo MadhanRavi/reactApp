@@ -1,0 +1,79 @@
+{
+  "info": {
+    "id": "360038",
+    "name": "Dindigul Thalappakatti - Since 1957\n",
+    "city": "119",
+    "slugs": {
+      "restaurant": "dindigul-thalappakatti-central-erode-central-erode",
+      "city": "erode"
+    },
+    "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/6/13/c67f5cc5-8daf-45fd-bf2d-350993269790_50d8e9e9-909f-4311-afb8-254e41b62c8d.jpg",
+    "address": "Door No:247, Ground Floor, Brough Road, Erode, Tamil Nadu    683001",
+    "locality": "Chidambaram Colony",
+    "areaName": "Erode Fort",
+    "costForTwo": "50000",
+    "costForTwoMessage": "₹500 FOR TWO",
+    "cuisines": ["Biryani", "Barbecue", "South Indian", "Chinese"],
+    "avgRating": 4.3,
+    "feeDetails": {},
+    "parentId": "641506",
+    "avgRatingString": "4.3",
+    "totalRatingsString": "6.1K+",
+    "sla": {
+      "deliveryTime": 23,
+      "minDeliveryTime": 20,
+      "maxDeliveryTime": 25,
+      "lastMileTravel": 2.9,
+      "serviceability": "SERVICEABLE",
+      "rainMode": "RAIN_MODE_NONE",
+      "slaString": "20-25 MINS",
+      "lastMileTravelString": "2.9 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "opened": true,
+      "restaurantClosedMeta": {}
+    },
+    "badges": {
+      "imageBadges": [
+        {
+          "imageId": "android/static-assets/icons/big_rx.png",
+          "description": "bolt!"
+        },
+        {
+          "imageId": "Rxawards/_CATEGORY-Biryani.png",
+          "description": "Delivery!"
+        }
+      ]
+    },
+    "aggregatedDiscountInfoV3": {
+      "header": "ITEMS",
+      "subHeader": "AT ₹199",
+      "logoCtx": {
+        "text": "BENEFITS"
+      }
+    },
+    "ratingSlab": "RATING_SLAB_5",
+    "orderabilityCommunication": {
+      "title": {},
+      "subTitle": {},
+      "message": {},
+      "customIcon": {},
+      "commsStyling": {}
+    },
+    "cartOrderabilityNudgeBanner": {
+      "parameters": {},
+      "presentation": {}
+    },
+    "externalRatings": {
+      "aggregatedRating": {
+        "rating": "--"
+      }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    "featuredSectionInfo": {
+      "sectionTitle": "More"
+    },
+    "showEoOffer": true
+  }
+}

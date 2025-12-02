@@ -4,7 +4,9 @@ const ResCard = ({ resData }) => {
   const { name, cuisines, costForTwo, avgRating, sla, cloudinaryImageId } =
     resData?.info;
   return (
-    <div className="w-[300px] bg-amber-100 p-4 m-4 hover:bg-amber-200">
+    <div
+      data-testid="resCard"
+      className="w-[300px] bg-amber-100 p-4 m-4 hover:bg-amber-200">
       <img
         src={CDN_IMG_URL + cloudinaryImageId}
         alt="biriyani"

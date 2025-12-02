@@ -11,7 +11,9 @@ const ItemsList = ({ data, cart }) => {
   };
 
   return (
-    <div className="border-b-4 border-b-gray-200 flex justify-between items-center py-2 my-2">
+    <div
+      data-testid="foodItem"
+      className="border-b-4 border-b-gray-200 flex justify-between items-center py-2 my-2">
       <div className="w-9/12 pr-2">
         <p className="my-1 py-1 text-xl font-bold">{data.card.info.name}</p>
         <p className="my-1 py-1 italic">
